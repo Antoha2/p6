@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  postgres:
+    container_name: postgres
+    image: postgres:16.1-alpine3.19
+    environment:
+     POSTGRES_DB: postgres
+     POSTGRES_USER: user
+     POSTGRES_PASSWORD: password
+    ports:
+      - '5432:5432'
+
+  proxy:
+    image: nginx:1.27.0-alpine
+    ports:
+      - 80:80
+

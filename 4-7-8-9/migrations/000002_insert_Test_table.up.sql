@@ -1,0 +1,1 @@
+insert into Test (name) values('google'),('yandex'),('amazon')
